@@ -1,0 +1,36 @@
+{
+  "name": "ezmoney",
+  "version": "0.0.0",
+  "description": "Finance managing application",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biirus/ezmoney.git"
+  },
+  "keywords": [
+    "finance",
+    "money",
+    "manage"
+  ],
+  "author": "Ivan Burnaev <ivan.biirus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/biirus/ezmoney/issues"
+  },
+  "homepage": "https://github.com/biirus/ezmoney#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0"
+  }
+}

@@ -1,0 +1,12 @@
+.vscode
+.idea
+.db
+
+dist
+build
+out
+
+node_modules
+
+*.local
+*.log
