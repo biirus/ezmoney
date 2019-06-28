@@ -11,12 +11,10 @@ const dummyTransaction = {
 module.exports = {
   Query: {
     transactions: () => {
-      return [];
+      return [dummyTransaction];
     },
     categories: async () => {
-      const cats = await Category.find();
-
-      return cats;
+      return await Category.find();
     },
   },
 };

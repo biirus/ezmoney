@@ -10,12 +10,12 @@ const Category = require("./mongo/models/Category");
 async function bootstrap () {
   const dbConnection = await connectDB();
 
-  const category = new Category({
-    name: "first category",
-    description: "some description",
-  });
+  // const category = new Category({
+  //   name: "first category",
+  //   description: "some description",
+  // });
 
-  category.save();
+  // category.save();
 
   const server = new ApolloServer({
     typeDefs,
