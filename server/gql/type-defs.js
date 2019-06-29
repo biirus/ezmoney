@@ -22,4 +22,13 @@ module.exports = gql`
     transactions: [Transaction]!
     categories: [Category]!
   }
+
+  input NewCategory {
+    name: String!
+    description: String
+  }
+
+  type Mutation {
+    createCategory(input: NewCategory!): Category
+  }
 `;

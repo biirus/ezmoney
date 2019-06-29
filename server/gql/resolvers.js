@@ -17,4 +17,11 @@ module.exports = {
       return await Category.find();
     },
   },
+
+  Mutation: {
+    createCategory: async (root, args, ctx) => {
+      const newCategory = await new Category({ ...args.input }).save();
+      return newCategory;
+    },
+  },
 };
