@@ -19,13 +19,37 @@ const GET_CATEGORIES = gql`
 
 const CREATE_CATEGORY = gql`
   mutation CreateCategory($name: String!, $description: String) {
-    createCategory(name: $name, description: $description) {
+    createCategory(input: { name: $name, description: $description }) {
       _id
       name
       description
     }
   }
 `;
+
+const CategoryForm = graphql(CREATE_CATEGORY)(props => {
+  console.log(props);
+
+  const { mutate } = props;
+
+  return (
+    <div>
+      Category Form
+      <button
+        onClick={() => {
+          mutate({
+            variables: {
+              name: "Client Category",
+              description: "Created from the UI"
+            }
+          });
+        }}
+      >
+        Mutate
+      </button>
+    </div>
+  );
+});
 
 const App = ({ data }) => {
   const { loading, error } = data;
@@ -40,6 +64,7 @@ const App = ({ data }) => {
       maxime quibusdam quam ducimus recusandae corporis voluptatum aperiam nulla
       vitae aut perferendis atque numquam nemo obcaecati, necessitatibus magnam?
       Voluptas.
+      <CategoryForm />
     </div>
   );
 };
